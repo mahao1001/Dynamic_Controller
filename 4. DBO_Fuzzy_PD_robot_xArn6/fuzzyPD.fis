@@ -1,0 +1,79 @@
+[System]
+Name='fuzzyPD'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='E'
+Range=[0 0.35]
+NumMFs=5
+MF1='NB':'gauss2mf',[0.02973 -0.00875 0.02973 0.00875]
+MF2='NS':'gauss2mf',[0.02973 0.07875 0.02973 0.09625]
+MF3='ZO':'gauss2mf',[0.02973 0.1662 0.02973 0.1837]
+MF4='PS':'gauss2mf',[0.02973 0.2537 0.02973 0.2712]
+MF5='PB':'gauss2mf',[0.02973 0.3412 0.02973 0.3588]
+
+[Input2]
+Name='EC'
+Range=[-6 6]
+NumMFs=5
+MF1='NB':'gauss2mf',[0.7776 -6.586 0.7776 -5.414]
+MF2='NS':'gauss2mf',[0.7776 -3.586 0.7776 -2.414]
+MF3='ZO':'gauss2mf',[0.7776 -0.584 0.7776 0.586]
+MF4='PS':'gauss2mf',[0.7776 2.414 0.7776 3.586]
+MF5='PB':'gauss2mf',[0.7776 5.414 0.7776 6.586]
+
+[Output1]
+Name='Kp'
+Range=[0 1]
+NumMFs=5
+MF1='NB':'gaussmf',[0.1062 0]
+MF2='NS':'gaussmf',[0.1062 0.25]
+MF3='ZO':'gaussmf',[0.1062 0.5]
+MF4='PS':'gaussmf',[0.1062 0.75]
+MF5='PB':'gaussmf',[0.1062 1]
+
+[Output2]
+Name='Kd'
+Range=[0 1]
+NumMFs=5
+MF1='NB':'gaussmf',[0.1062 0]
+MF2='NS':'gaussmf',[0.1062 0.25]
+MF3='ZO':'gaussmf',[0.1062 0.5]
+MF4='PS':'gaussmf',[0.1062 0.75]
+MF5='PB':'gaussmf',[0.1062 1]
+
+[Rules]
+1 1, 5 4 (1) : 1
+1 2, 4 1 (1) : 1
+1 3, 4 1 (1) : 1
+1 4, 4 1 (1) : 1
+1 5, 3 4 (1) : 1
+2 1, 4 3 (1) : 1
+2 2, 4 2 (1) : 1
+2 3, 4 2 (1) : 1
+2 4, 3 2 (1) : 1
+2 5, 2 3 (1) : 1
+3 1, 4 3 (1) : 1
+3 2, 4 2 (1) : 1
+3 3, 3 2 (1) : 1
+3 4, 2 2 (1) : 1
+3 5, 2 3 (1) : 1
+4 1, 4 3 (1) : 1
+4 2, 3 3 (1) : 1
+4 3, 2 3 (1) : 1
+4 4, 2 3 (1) : 1
+4 5, 2 3 (1) : 1
+5 1, 3 5 (1) : 1
+5 2, 2 4 (1) : 1
+5 3, 2 4 (1) : 1
+5 4, 2 4 (1) : 1
+5 5, 1 5 (1) : 1
