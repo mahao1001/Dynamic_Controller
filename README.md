@@ -1,5 +1,10 @@
 Adaptive Fuzzy PD Controller for 6-DOF Collaborative Robot Manipulator Trajectory Tracking
 
+This paper presents several key contributions to the field of robotic control systems:
+(1) The Dung Beetle Optimization (DBO) algorithm is improved to optimize controller parameters more effectively.
+(2) An adaptive iterative learning fuzzy PD control method is designed based on PD control to calculate the torque of the robot manipulator.
+(3) The improved DBO algorithm is combined with the fuzzy PD controller to create a robust system capable of high-precision trajectory tracking.
+
 This repository contains the code and related materials for the paper titled "Adaptive Fuzzy PD Controller for 6-DOF Collaborative Robot Manipulator Trajectory Tracking." The project focuses on developing an improved Dung Beetle Optimization (DBO) algorithm, integrating it with fuzzy logic to create a robust and adaptive PD controller for precise trajectory tracking of a 6-DOF collaborative robot manipulator.
 
 The repository is organized into 5 main directories, each containing specific components of the research:
