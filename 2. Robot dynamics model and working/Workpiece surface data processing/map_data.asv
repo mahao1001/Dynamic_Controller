@@ -1,0 +1,12 @@
+% 得出一个想要的数据
+
+clear; 
+clc;
+
+load('sample_points.mat')
+load('normals.mat')
+load('axang_list.mat')
+
+surf_data = struct('sample_points',sample_points,'normals',normals,'axang_list',axang_list);
+
+save('surf_data.mat', 'combinedData');
